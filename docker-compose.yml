@@ -1,6 +1,7 @@
 version: "3.8"
 
 services:
+# MSSQL Server, MySQL, PostgreSQL Databases
   mssql:
     container_name: mssql-db
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -40,6 +41,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  # phpmyadmin, Adminer and pgAdmin for database management
   adminer:
     image: adminer
     restart: always
