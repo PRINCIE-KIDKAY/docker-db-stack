@@ -2,7 +2,7 @@
 
 
 
-This project provides a simple `docker-compose` setup for running a PostgreSQL, Microsof SQL Server, MySQL database with Adminer, PHPMyadmin, PGADMIN (lightweight database management tools).
+This project provides a simple `docker-compose` setup for running a PostgreSQL, Microsoft SQL Server, MySQL database with Adminer, PHPMyadmin, PGADMIN (lightweight database management tools).
 
 ## 📦 Requirements
 
@@ -35,6 +35,13 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 - Password: `123456`
 - Database: `mydb`
 - Exposed on `localhost:3306`
+
+# mssql
+- Username: `sa` # default user
+- Password: `YourStrong!Passw0rd`
+- Database: `master` # master is a default system database or simply connect to your db 
+- Server: `mssql-db` # container name or database-ip or database url
+- Exposed on `localhost:1433`
 
 # Access the services
 - Adminer UI: Open your browser and go to `http://localhost:8080`
