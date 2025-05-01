@@ -24,16 +24,17 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 ## this will Start containers with:
 
 # postgresql
-- Username: postgres
-- Password: 123456
-- Database: postgres
-- Exposed on localhost:5432
+- Username: `postgres`
+- Password: `123456`
+- Database: `postgres`
+- Exposed on `localhost:5432`
+- DB hostname: `postgres` ## to connect to your local db
 
 # mysql
-- Username: root
-- Password: 123456
-- Database: mydb
-- Exposed on localhost:3306
+- Username: `root`
+- Password: `123456`
+- Database: `mydb`
+- Exposed on `localhost:3306`
 
 # Access the services
 - Adminer UI: Open your browser and go to `http://localhost:8080`
