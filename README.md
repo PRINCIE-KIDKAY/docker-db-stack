@@ -48,8 +48,6 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 - pgadmin UI: Open your browser and go to `http://localhost:8081`
 - phpmyadmin UI: Open your browser and go to `http://localhost:8082`
 
-
-
 # Stop the containers
 
 `docker-compose down`
