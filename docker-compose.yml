@@ -1,0 +1,77 @@
+version: "3.8"
+
+services:
+  mssql:
+    container_name: mssql-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong!Passw0rd"  # Must meet SQL Server password complexity
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssqldata:/var/opt/mssql
+
+  mysql:
+    container_name: mysql-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: "mydb"
+      MYSQL_PASSWORD: "123456"
+    ports:
+      - "3306:3306"  # MySQL exposed to host as port 3306
+    volumes:
+      - mysqldata:/var/lib/mysql
+
+  postgres:
+    container_name: postgres-db
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "postgres"
+    ports:
+      - "5432:5432"  # PostgreSQL exposed to host on port 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"  # Adminer exposed on host:8180
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"  # Default login email
+      PGADMIN_DEFAULT_PASSWORD: "admin"         # Default login password
+    ports:
+      - "8081:80"  # pgAdmin exposed to host on port 8081
+    depends_on:
+      - postgres
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: "123456"
+    ports:
+      - "8082:80"  # phpMyAdmin exposed to host on port 8082
+    depends_on:
+      - mysql
+
+volumes:
+  mysqldata:
+  pgdata:
+  mssqldata:
