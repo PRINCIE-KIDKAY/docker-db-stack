@@ -17,12 +17,13 @@ services:
 
   mysql:
     container_name: mysql-db
-    image: mysql:latest
+    image: mysql:8.0 #for compoatibility with mysql workbench
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
       MYSQL_DATABASE: "mydb"
       MYSQL_PASSWORD: "123456"
+      #MYSQL_USER: "user"             # optional if you want a non-root user
     ports:
       - "3306:3306"  # MySQL exposed to host as port 3306
     volumes:

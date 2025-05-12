@@ -55,6 +55,7 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
     - Server type: `Database Engine`
     - Authentication: `SQL Server Authentication`
     - Encryption: `Optional`
+    - Host name in certificate: `localhost`
 
 # Stop the containers
 
