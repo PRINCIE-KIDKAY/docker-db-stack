@@ -6,49 +6,49 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 
 ## 📦 Requirements
 
-- [Docker](https://www.docker.com/get-started)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+    - [Docker](https://www.docker.com/get-started)
+    - [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## 🚀 Getting Started
 
 ### 1. Clone this repository (or copy the `docker-compose.yml` to your project)
 
 # bash
-- git clone https://github.com/PRINCIE-KIDKAY/docker-postgresql-DB.git
-- cd your-project-directory
+    - git clone https://github.com/PRINCIE-KIDKAY/docker-postgresql-DB.git
+    - cd your-project-directory
 
 
 ## Start the containers
-`docker-compose up -d`
+    `docker-compose up -d`
 
 ## this will Start containers with:
 
 # postgresql
-- Username: `postgres`
-- Password: `123456`
-- Database: `postgres`
-- Exposed on `localhost:5432`
-- DB hostname: `postgres` ## to connect to your local db
+    - Username: `postgres`
+    - Password: `123456`
+    - Database: `postgres`
+    - Exposed on `localhost:5432`
+    - DB hostname: `postgres` ## to connect to your local db
 
 # mysql
-- Username: `root`
-- Password: `123456`
-- Database: `mydb`
-- Exposed on `localhost:3306`
+    - Username: `root`
+    - Password: `123456`
+    - Database: `mydb`
+    - Exposed on `localhost:3306`
 
 # mssql
-- Username: `sa` # default user
-- Password: `F!iB6#dO6O7KJK8`
-- Database: `master` # master is a default system database or simply connect to your db 
-- Server: `mssql-db` # container name or database-ip or database url
-- Exposed on `localhost:1433`
+    - Username: `sa` # default user
+    - Password: `F!iB6#dO6O7KJK8`
+    - Database: `master` # master is a default system database or simply connect to your db 
+    - Server: `mssql-db` # container name or database-ip or database url
+    - Exposed on `localhost:1433`
 
 
 
 # Access the services
-- Adminer UI: Open your browser and go to `http://localhost:8080`
-- pgadmin UI: Open your browser and go to `http://localhost:8081`
-- phpmyadmin UI: Open your browser and go to `http://localhost:8082`
+    - Adminer UI: Open your browser and go to `http://localhost:8080`
+    - pgadmin UI: Open your browser and go to `http://localhost:8081`
+    - phpmyadmin UI: Open your browser and go to `http://localhost:8082`
 
 # ssms-connection for mssql:
     - server-name: `127.0.0.1,1433`
@@ -57,6 +57,11 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
     - Encryption: `Optional`
     - Host name in certificate: `localhost`
 
-# Stop the containers
+# mysql-Workbench:
+    - Username: `root`
+    - Password: `123456`
+    - Host-name: `localhost`
+    - Port: `3306`
 
-`docker-compose down`
+# Stop the containers
+    `docker-compose down`
