@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       ACCEPT_EULA: "Y"
-      SA_PASSWORD: "YourStrong!Passw0rd"  # Must meet SQL Server password complexity
+      SA_PASSWORD: "F!iB6#dO6O7KJK8"  # Must meet SQL Server password complexity
       MSSQL_PID: "Developer"
     ports:
       - "1433:1433"
