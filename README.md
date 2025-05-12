@@ -43,10 +43,18 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 - Server: `mssql-db` # container name or database-ip or database url
 - Exposed on `localhost:1433`
 
+
+
 # Access the services
 - Adminer UI: Open your browser and go to `http://localhost:8080`
 - pgadmin UI: Open your browser and go to `http://localhost:8081`
 - phpmyadmin UI: Open your browser and go to `http://localhost:8082`
+
+# ssms-connection for mssql:
+    - server-name: `127.0.0.1,1433`
+    - Server type: `Database Engine`
+    - Authentication: `SQL Server Authentication`
+    - Encryption: `Optional`
 
 # Stop the containers
 
