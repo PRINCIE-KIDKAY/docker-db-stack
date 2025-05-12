@@ -38,7 +38,7 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 
 # mssql
 - Username: `sa` # default user
-- Password: `YourStrong!Passw0rd`
+- Password: `F!iB6#dO6O7KJK8`
 - Database: `master` # master is a default system database or simply connect to your db 
 - Server: `mssql-db` # container name or database-ip or database url
 - Exposed on `localhost:1433`
