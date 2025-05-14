@@ -28,7 +28,8 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
     - Password: `123456`
     - Database: `postgres`
     - Exposed on `localhost:5432`
-    - DB hostname: `postgres` ## to connect to your local db
+    - DB hostname: `postgres` ## to connect to your db running in docker
+    
 
 # mysql
     - Username: `root`
@@ -62,6 +63,16 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
     - Password: `123456`
     - Host-name: `localhost`
     - Port: `3306`
+
+# pgadmin
+    - Username: `postgres`
+    - Password: `123456`
+    - Database: `postgres`
+    - Exposed on `localhost:5432`
+    - Container DB hostname: `postgres` ## to connect to your db running in docker
+    - hostname:  
+        1.`host.docker.internal` ## to connect to any db via ssh to pg admin running in docker
+        2.`your-db-ip` ## to connect to any remote db via db-ip to pg admin running in docker
 
 # Stop the containers
     `docker-compose down`
