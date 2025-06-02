@@ -76,3 +76,5 @@ This project provides a simple `docker-compose` setup for running a PostgreSQL, 
 
 # Stop the containers
     `docker-compose down`
+    `docker-compose down -v --remove-orphans` # only run this when you want a fresh restart
+    `docker system prune -a --volumes` # to clear catches

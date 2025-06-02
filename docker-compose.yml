@@ -31,7 +31,7 @@ services:
 
   postgres:
     container_name: postgres-db
-    image: postgres:latest
+    image: ankane/pgvector:latest
     restart: always
     environment:
       POSTGRES_USER: "postgres"
